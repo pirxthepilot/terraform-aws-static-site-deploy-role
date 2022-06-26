@@ -13,7 +13,7 @@ Basic usage:
 
 ```
 module "mysite_deploy_role" {
-  source = "./modules/terraform-aws-static-site-deploy-role"
+  source = "github.com/pirxthepilot/terraform-aws-static-site-deploy-role?ref=v0.0.1"
   name   = "mysite_deploy_role"
 
   domain                      = "example.com"
@@ -23,11 +23,13 @@ module "mysite_deploy_role" {
 }
 ```
 
+It is highly recommended that you pin to a specific tag or commit ID by including `?ref=<tag_or_commit>` in the `source` declaration. Otherwise, future changes to this repo might break your site's deployment. 
+
 Used with [terraform-aws-static-site](https://github.com/pirxthepilot/terraform-aws-static-site):
 
 ```
 module "mysite" {
-  source = "./modules/terraform-aws-static-site"
+  source = "github.com/pirxthepilot/terraform-aws-static-site?ref=v0.0.1"
   name   = "mysite"
 
   domain               = var.domain
@@ -36,7 +38,7 @@ module "mysite" {
 }
 
 module "mysite_deploy_role" {
-  source = "./modules/terraform-aws-static-site-deploy-role"
+  source = "github.com/pirxthepilot/terraform-aws-static-site-deploy-role?ref=v0.0.1"
   name   = "mysite_deploy_role"
 
   domain                      = var.domain
