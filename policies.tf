@@ -82,7 +82,6 @@ data "aws_iam_policy_document" "role_permissions" {
       "cloudfront:TagResource",
       "cloudfront:GetInvalidation",
       "cloudfront:CreateInvalidation",
-      "cloudfront:CreateCloudFrontOriginAccessIdentity",
       "cloudfront:GetDistribution",
       "cloudfront:ListTagsForResource",
       "cloudfront:ListInvalidations",

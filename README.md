@@ -19,7 +19,7 @@ module "mysite_deploy_role" {
   domain                      = "example.com"
   iam_user_arns               = ["arn:aws:iam::111111111111:user/user1", "arn:aws:iam::111111111111:user/user2"]
   s3_bucket_arn               = "arn:aws:s3:::example.com"
-  cloudfront_distribution_arn = "12345678"
+  cloudfront_distribution_arn = "arn:aws:cloudfront::111111111111:distribution/ABCDE12345"
 }
 ```
 
